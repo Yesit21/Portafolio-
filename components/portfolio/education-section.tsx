@@ -4,8 +4,8 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const timeline = [
   {
-    period: "2023 – Actualidad",
-    title: "Ingeniería de Sistemas",
+    period: "2024 – Actualidad",
+    title: "Ingeniería de Software",
     description: "Formación académica enfocada en desarrollo de software, bases de datos y arquitectura de sistemas, con énfasis en soluciones tecnológicas innovadoras.",
     items: [
       "Desarrollo web con tecnologías modernas (React, Next.js)",
