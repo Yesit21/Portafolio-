@@ -71,14 +71,26 @@ export const translations = {
       label: "Journey",
       title: "Education",
       subtitle: "My academic journey and professional training.",
-      period: "2024 – Present",
-      degree: "Software Engineering",
-      description: "Academic training focused on software development, databases and systems architecture, with emphasis on innovative technological solutions.",
-      items: [
-        "Web development with modern technologies (React, Next.js)",
-        "Relational database design and modeling",
-        "Object-oriented programming with Java and Python",
-      ],
+      university: {
+        period: "2024 – Present",
+        degree: "Software Engineering",
+        description: "Academic training focused on software development, databases and systems architecture, with emphasis on innovative technological solutions.",
+        items: [
+          "Web development with modern technologies (React, Next.js)",
+          "Relational database design and modeling",
+          "Object-oriented programming with Java and Python",
+        ],
+      },
+      sena: {
+        period: "2023",
+        degree: "Computational Thinking Course - SENA",
+        description: "Technical training in computational fundamentals, logic and problem-solving through programming.",
+        items: [
+          "Computational logic and algorithms",
+          "Introduction to programming",
+          "Problem-solving with technology",
+        ],
+      },
     },
     contact: {
       label: "Let's Connect",
@@ -159,14 +171,26 @@ export const translations = {
       label: "Trayectoria",
       title: "Educación",
       subtitle: "Mi trayectoria académica y formación profesional.",
-      period: "2024 – Actualidad",
-      degree: "Ingeniería de Software",
-      description: "Formación académica enfocada en desarrollo de software, bases de datos y arquitectura de sistemas, con énfasis en soluciones tecnológicas innovadoras.",
-      items: [
-        "Desarrollo web con tecnologías modernas (React, Next.js)",
-        "Diseño y modelado de bases de datos relacionales",
-        "Programación orientada a objetos con Java y Python",
-      ],
+      university: {
+        period: "2024 – Actualidad",
+        degree: "Ingeniería de Software",
+        description: "Formación académica enfocada en desarrollo de software, bases de datos y arquitectura de sistemas, con énfasis en soluciones tecnológicas innovadoras.",
+        items: [
+          "Desarrollo web con tecnologías modernas (React, Next.js)",
+          "Diseño y modelado de bases de datos relacionales",
+          "Programación orientada a objetos con Java y Python",
+        ],
+      },
+      sena: {
+        period: "2023",
+        degree: "Curso de Pensamiento Computacional - SENA",
+        description: "Formación técnica en fundamentos computacionales, lógica y resolución de problemas mediante programación.",
+        items: [
+          "Lógica computacional y algoritmos",
+          "Introducción a la programación",
+          "Resolución de problemas con tecnología",
+        ],
+      },
     },
     contact: {
       label: "Conectemos",
