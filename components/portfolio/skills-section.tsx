@@ -2,6 +2,31 @@
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useLanguage } from "@/contexts/language-context"
+import { 
+  SiNextdotjs, 
+  SiReact, 
+  SiTailwindcss,
+  SiHtml5,
+  SiPython,
+  SiMysql,
+} from "react-icons/si"
+import { Code2, Server, Layers, Database, Palette, Table } from "lucide-react"
+
+const skillIcons: { [key: string]: any } = {
+  "Next.js": SiNextdotjs,
+  "React": SiReact,
+  "HTML/CSS": SiHtml5,
+  "Tailwind CSS": SiTailwindcss,
+  "UI/UX": Palette,
+  "Java": Code2,
+  "Python": SiPython,
+  "RESTful APIs": Server,
+  "Software Architecture": Layers,
+  "SQL": SiMysql,
+  "E-R Modeling": Table,
+  "Database Design": Database,
+  "Data Integrity": Database,
+}
 
 export function SkillsSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
@@ -61,15 +86,18 @@ export function SkillsSection() {
               </h3>
               
               <ul className="space-y-3">
-                {category.skills.map((skill) => (
-                  <li
-                    key={skill}
-                    className="text-sm text-muted-foreground flex items-center gap-3"
-                  >
-                    <span className="w-1.5 h-1.5 bg-red-600 rounded-full" />
-                    {skill}
-                  </li>
-                ))}
+                {category.skills.map((skill) => {
+                  const IconComponent = skillIcons[skill] || Code2
+                  return (
+                    <li
+                      key={skill}
+                      className="text-sm text-muted-foreground flex items-center gap-3"
+                    >
+                      <IconComponent className="w-4 h-4 text-red-600 flex-shrink-0" />
+                      {skill}
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           ))}
