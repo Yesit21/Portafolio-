@@ -74,7 +74,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleSmoothScroll(e, item.href)}
-                className="text-sm text-muted-foreground hover:text-red-600 transition-colors cursor-pointer"
+                className="text-sm text-red-600 hover:text-red-700 transition-colors cursor-pointer font-medium"
               >
                 {item.label.split('.').reduce((obj: any, key) => obj[key], t)}
               </a>
@@ -135,7 +135,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleSmoothScroll(e, item.href)}
-                  className="text-sm text-muted-foreground hover:text-red-600 transition-colors py-3 px-2 cursor-pointer"
+                  className="text-sm text-red-600 hover:text-red-700 transition-colors py-3 px-2 cursor-pointer font-medium"
                 >
                   {item.label.split('.').reduce((obj: any, key) => obj[key], t)}
                 </a>
