@@ -106,7 +106,6 @@ export function CherryBlossoms() {
           style={{
             left: `${lightning.left}%`,
             animationDuration: `${lightning.duration}s`,
-            width: '3px',
             height: '100vh',
           }}
         >
