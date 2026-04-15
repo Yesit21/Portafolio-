@@ -1,22 +1,20 @@
 "use client"
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-
-const timeline = [
-  {
-    period: "2024 – Actualidad",
-    title: "Ingeniería de Software",
-    description: "Formación académica enfocada en desarrollo de software, bases de datos y arquitectura de sistemas, con énfasis en soluciones tecnológicas innovadoras.",
-    items: [
-      "Desarrollo web con tecnologías modernas (React, Next.js)",
-      "Diseño y modelado de bases de datos relacionales",
-      "Programación orientada a objetos con Java y Python",
-    ],
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 export function EducationSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
+  const { t } = useLanguage()
+
+  const timeline = [
+    {
+      period: t.education.period,
+      title: t.education.degree,
+      description: t.education.description,
+      items: t.education.items,
+    },
+  ]
 
   return (
     <section ref={ref} className="py-24 lg:py-32 bg-muted/30">
@@ -27,16 +25,16 @@ export function EducationSection() {
           }`}
         >
           <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-4">
-            Trayectoria
+            {t.education.label}
           </p>
           <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Educación
+            {t.education.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Mi trayectoria académica y formación profesional.
+            {t.education.subtitle}
           </p>
         </div>
 
