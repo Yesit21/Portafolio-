@@ -2,27 +2,29 @@
 
 import { Code2, Brain, Lightbulb } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-
-const highlights = [
-  {
-    icon: Code2,
-    title: "Desarrollo de Software",
-    description: "Creación de aplicaciones web modernas con tecnologías actuales como React y Next.js, aplicando buenas prácticas de código y diseño centrado en el usuario.",
-  },
-  {
-    icon: Brain,
-    title: "Inteligencia Artificial",
-    description: "Exploración de soluciones con IA para automatización y análisis de datos, utilizando Python y herramientas modernas para resolver desafíos reales.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Creatividad Digital",
-    description: "Fusión de tecnología con expresión artística, desarrollando proyectos que combinan código limpio con diseño innovador y experiencias interactivas.",
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 export function AboutSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
+  const { t } = useLanguage()
+
+  const highlights = [
+    {
+      icon: Code2,
+      title: t.about.highlights.software.title,
+      description: t.about.highlights.software.description,
+    },
+    {
+      icon: Brain,
+      title: t.about.highlights.ai.title,
+      description: t.about.highlights.ai.description,
+    },
+    {
+      icon: Lightbulb,
+      title: t.about.highlights.creativity.title,
+      description: t.about.highlights.creativity.description,
+    },
+  ]
 
   return (
     <section id="sobre-mi" ref={ref} className="py-24 lg:py-32">
@@ -33,19 +35,16 @@ export function AboutSection() {
           }`}
         >
           <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-4">
-            Perfil
+            {t.about.label}
           </p>
           <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Sobre mí
+            {t.about.title}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Soy Marlon Andrade, desarrollador enfocado en crear soluciones tecnológicas 
-            funcionales y bien estructuradas. Me dedico al desarrollo de software, inteligencia artificial 
-            y diseño de sistemas. Las carreras de motos y la composición musical 
-            aportan perspectivas diferentes a mi enfoque técnico.
+            {t.about.description}
           </p>
         </div>
 
@@ -58,8 +57,8 @@ export function AboutSection() {
               }`}
               style={{ transitionDelay: `${index * 100 + 200}ms` }}
             >
-              <div className="w-12 h-12 border border-border flex items-center justify-center mb-6">
-                <item.icon className="w-6 h-6 text-foreground" />
+              <div className="w-12 h-12 border border-red-600 flex items-center justify-center mb-6">
+                <item.icon className="w-6 h-6 text-red-600" />
               </div>
               <h3 
                 className="text-lg font-semibold text-foreground mb-3"
