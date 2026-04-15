@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { LanguageProvider } from '@/contexts/language-context'
+import { CherryBlossoms } from '@/components/cherry-blossoms'
 import './globals.css'
 
 const inter = Inter({ 
@@ -53,6 +54,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
+            <CherryBlossoms />
             {children}
           </LanguageProvider>
         </ThemeProvider>
