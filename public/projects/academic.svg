@@ -1,15 +1,107 @@
 <svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#93c5fd;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="url(#grad2)"/>
-  <text x="400" y="180" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Academic</text>
-  <text x="400" y="230" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Management</text>
-  <text x="400" y="280" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">Java + SQL Database</text>
-  <rect x="200" y="320" width="80" height="80" fill="rgba(255,255,255,0.2)" rx="10"/>
-  <rect x="360" y="320" width="80" height="80" fill="rgba(255,255,255,0.15)" rx="10"/>
-  <rect x="520" y="320" width="80" height="80" fill="rgba(255,255,255,0.2)" rx="10"/>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative connection lines -->
+  <circle cx="60" cy="570" r="20" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <circle cx="60" cy="570" r="10" fill="rgba(255,255,255,0.1)"/>
+  <line x1="80" y1="570" x2="200" y2="480" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <circle cx="950" cy="390" r="25" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <circle cx="950" cy="390" r="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1000" cy="470" r="15" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <line x1="950" y1="415" x2="950" y2="460" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <circle cx="320" cy="600" r="18" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  
+  <!-- Laptop base -->
+  <path d="M 150 380 L 650 380 L 680 420 L 120 420 Z" fill="#1e293b" opacity="0.8"/>
+  
+  <!-- Laptop screen -->
+  <rect x="180" y="120" width="440" height="260" fill="#1e293b" rx="8"/>
+  <rect x="195" y="135" width="410" height="230" fill="url(#screenGrad)" rx="4"/>
+  
+  <!-- Dashboard panels floating above -->
+  <g opacity="0.85">
+    <!-- Panel 1 - Left with charts -->
+    <rect x="80" y="40" width="200" height="280" fill="rgba(219,234,254,0.95)" rx="8" transform="rotate(-8 180 180)"/>
+    <rect x="95" y="55" width="80" height="60" fill="rgba(59,130,246,0.3)" rx="4" transform="rotate(-8 135 85)"/>
+    <line x1="100" y1="140" x2="150" y2="140" stroke="rgba(30,64,175,0.4)" stroke-width="2" transform="rotate(-8 125 140)"/>
+    <line x1="100" y1="155" x2="180" y2="155" stroke="rgba(30,64,175,0.4)" stroke-width="2" transform="rotate(-8 140 155)"/>
+    <line x1="100" y1="170" x2="160" y2="170" stroke="rgba(30,64,175,0.4)" stroke-width="2" transform="rotate(-8 130 170)"/>
+    <!-- Chart bars -->
+    <rect x="95" y="210" width="15" height="40" fill="rgba(59,130,246,0.6)" transform="rotate(-8 102 230)"/>
+    <rect x="115" y="195" width="15" height="55" fill="rgba(59,130,246,0.6)" transform="rotate(-8 122 222)"/>
+    <rect x="135" y="180" width="15" height="70" fill="rgba(59,130,246,0.6)" transform="rotate(-8 142 215)"/>
+    <rect x="155" y="200" width="15" height="50" fill="rgba(59,130,246,0.6)" transform="rotate(-8 162 225)"/>
+  </g>
+  
+  <g opacity="0.9">
+    <!-- Panel 2 - Center with calendar/grid -->
+    <rect x="280" y="30" width="180" height="240" fill="rgba(219,234,254,0.95)" rx="8" transform="rotate(5 370 150)"/>
+    <rect x="295" y="50" width="40" height="25" fill="rgba(59,130,246,0.3)" rx="3" transform="rotate(5 315 62)"/>
+    <circle cx="360" cy="62" r="8" fill="rgba(59,130,246,0.2)" transform="rotate(5 360 62)"/>
+    <!-- Grid dots -->
+    <circle cx="305" cy="100" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="325" cy="100" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="345" cy="100" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="365" cy="100" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="385" cy="100" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="305" cy="120" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="325" cy="120" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="345" cy="120" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="365" cy="120" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="385" cy="120" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="305" cy="140" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="325" cy="140" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="345" cy="140" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="365" cy="140" r="3" fill="rgba(30,64,175,0.4)"/>
+    <circle cx="385" cy="140" r="3" fill="rgba(30,64,175,0.4)"/>
+    <!-- Lines below -->
+    <line x1="300" y1="180" x2="380" y2="180" stroke="rgba(30,64,175,0.3)" stroke-width="2"/>
+    <line x1="300" y1="195" x2="420" y2="195" stroke="rgba(30,64,175,0.3)" stroke-width="2"/>
+    <line x1="300" y1="210" x2="400" y2="210" stroke="rgba(30,64,175,0.3)" stroke-width="2"/>
+    <circle cx="295" cy="180" r="4" fill="rgba(59,130,246,0.5)"/>
+    <circle cx="295" cy="195" r="4" fill="rgba(59,130,246,0.5)"/>
+    <circle cx="295" cy="210" r="4" fill="rgba(59,130,246,0.5)"/>
+  </g>
+  
+  <g opacity="0.85">
+    <!-- Panel 3 - Right with list -->
+    <rect x="520" y="50" width="220" height="300" fill="rgba(219,234,254,0.95)" rx="8" transform="rotate(-5 630 200)"/>
+    <rect x="540" y="70" width="60" height="30" fill="rgba(59,130,246,0.3)" rx="4" transform="rotate(-5 570 85)"/>
+    <circle cx="690" cy="85" r="12" fill="rgba(59,130,246,0.2)" transform="rotate(-5 690 85)"/>
+    <!-- List items -->
+    <line x1="545" y1="125" x2="700" y2="125" stroke="rgba(30,64,175,0.4)" stroke-width="3" transform="rotate(-5 622 125)"/>
+    <line x1="545" y1="145" x2="680" y2="145" stroke="rgba(30,64,175,0.4)" stroke-width="3" transform="rotate(-5 612 145)"/>
+    <line x1="545" y1="165" x2="710" y2="165" stroke="rgba(30,64,175,0.4)" stroke-width="3" transform="rotate(-5 627 165)"/>
+    <line x1="545" y1="185" x2="690" y2="185" stroke="rgba(30,64,175,0.4)" stroke-width="3" transform="rotate(-5 617 185)"/>
+    <line x1="545" y1="205" x2="700" y2="205" stroke="rgba(30,64,175,0.4)" stroke-width="3" transform="rotate(-5 622 205)"/>
+    <line x1="545" y1="225" x2="675" y2="225" stroke="rgba(30,64,175,0.4)" stroke-width="3" transform="rotate(-5 610 225)"/>
+    <!-- Checkboxes -->
+    <rect x="540" y="120" width="12" height="12" fill="none" stroke="rgba(30,64,175,0.4)" stroke-width="2" transform="rotate(-5 546 126)"/>
+    <rect x="540" y="140" width="12" height="12" fill="none" stroke="rgba(30,64,175,0.4)" stroke-width="2" transform="rotate(-5 546 146)"/>
+    <rect x="540" y="160" width="12" height="12" fill="none" stroke="rgba(30,64,175,0.4)" stroke-width="2" transform="rotate(-5 546 166)"/>
+    <rect x="540" y="180" width="12" height="12" fill="none" stroke="rgba(30,64,175,0.4)" stroke-width="2" transform="rotate(-5 546 186)"/>
+    <!-- Small squares on right -->
+    <rect x="680" y="260" width="35" height="35" fill="rgba(147,197,253,0.4)" rx="4" transform="rotate(-5 697 277)"/>
+    <rect x="640" y="270" width="30" height="30" fill="rgba(147,197,253,0.4)" rx="4" transform="rotate(-5 655 285)"/>
+  </g>
+  
+  <!-- Laptop keyboard hint -->
+  <rect x="220" y="390" width="360" height="15" fill="rgba(100,116,139,0.3)" rx="2"/>
+  
+  <!-- Trackpad -->
+  <rect x="360" y="395" width="80" height="10" fill="rgba(71,85,105,0.4)" rx="2"/>
 </svg>
