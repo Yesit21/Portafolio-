@@ -9,10 +9,16 @@ export function EducationSection() {
 
   const timeline = [
     {
-      period: t.education.period,
-      title: t.education.degree,
-      description: t.education.description,
-      items: t.education.items,
+      period: t.education.university.period,
+      title: t.education.university.degree,
+      description: t.education.university.description,
+      items: t.education.university.items,
+    },
+    {
+      period: t.education.sena.period,
+      title: t.education.sena.degree,
+      description: t.education.sena.description,
+      items: t.education.sena.items,
     },
   ]
 
@@ -38,7 +44,7 @@ export function EducationSection() {
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto space-y-8">
           {timeline.map((item, index) => (
             <div 
               key={index} 
@@ -48,13 +54,15 @@ export function EducationSection() {
               style={{ transitionDelay: `${index * 150 + 200}ms` }}
             >
               {/* Timeline line */}
-              <div className="absolute left-0 top-0 bottom-0 w-px bg-border" />
+              {index < timeline.length - 1 && (
+                <div className="absolute left-0 top-0 bottom-0 w-px bg-border" />
+              )}
               
               {/* Timeline dot */}
-              <div className="absolute left-0 top-0 w-px h-4 bg-foreground -translate-x-0" />
+              <div className="absolute left-[-4px] top-2 w-2 h-2 bg-red-600 rounded-full" />
               
               {/* Content */}
-              <div className="bg-card border border-border p-6 transition-all duration-300 hover:border-foreground/20">
+              <div className="bg-card border border-border p-6 transition-all duration-300 hover:border-red-600/30">
                 <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2">
                   {item.period}
                 </p>
@@ -70,7 +78,7 @@ export function EducationSection() {
                 <ul className="space-y-2">
                   {item.items.map((listItem, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1 h-1 bg-foreground/40 mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 shrink-0" />
                       {listItem}
                     </li>
                   ))}
