@@ -5,9 +5,11 @@ import { ArrowRight, Mail } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/contexts/language-context"
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     setIsVisible(true)
@@ -46,13 +48,13 @@ export function HeroSection() {
               }`}
             >
               <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground">
-                Desarrollador de Software
+                {t.hero.title}
               </p>
               <h1 
                 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-foreground text-balance"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                Hola, soy Marlon Andrade
+                {t.hero.greeting}
               </h1>
               <p 
                 className={`text-xl sm:text-2xl text-muted-foreground font-light leading-relaxed transition-all duration-700 ${
@@ -60,7 +62,7 @@ export function HeroSection() {
                 }`}
                 style={{ transitionDelay: "100ms" }}
               >
-                Desarrollador enfocado en software, inteligencia artificial y proyectos tecnológicos
+                {t.hero.subtitle}
               </p>
             </div>
 
@@ -70,10 +72,7 @@ export function HeroSection() {
               }`}
               style={{ transitionDelay: "200ms" }}
             >
-              Enfocado en el desarrollo de aplicaciones web y soluciones tecnológicas utilizando 
-              herramientas modernas como React, Next.js, Java y Python. Mi experiencia incluye 
-              desarrollo full-stack, bases de datos y arquitectura de software. 
-              Las carreras de motos y la composición musical complementan mi perfil técnico.
+              {t.hero.description}
             </p>
 
             <div 
@@ -84,14 +83,14 @@ export function HeroSection() {
             >
               <Button asChild size="lg" className="gap-2 bg-red-600 hover:bg-red-700 text-white">
                 <Link href="#proyectos">
-                  Ver proyectos
-                  <ArrowRight className="w-4 h-4" />
+                  {t.hero.viewProjects}
+                  <ArrowRight className="w-4 h-4 text-white" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
                 <Link href="#contacto">
                   <Mail className="w-4 h-4" />
-                  Contactar
+                  {t.hero.contact}
                 </Link>
               </Button>
             </div>
