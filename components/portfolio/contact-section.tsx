@@ -1,7 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react"
+import { Mail, Linkedin } from "lucide-react"
 import Link from "next/link"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useLanguage } from "@/contexts/language-context"
@@ -47,7 +46,7 @@ export function ContactSection() {
           </p>
 
           <div 
-            className={`space-y-3 mb-12 transition-all duration-700 ${
+            className={`flex justify-center gap-8 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: "200ms" }}
@@ -56,35 +55,17 @@ export function ContactSection() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`flex items-center justify-between p-4 bg-card border border-border transition-all duration-300 group hover:border-foreground/20 ${
-                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                className={`flex flex-col items-center gap-3 group transition-all duration-300 ${
+                  isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
                 }`}
                 style={{ transitionDelay: `${index * 100 + 300}ms` }}
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 border border-red-600 flex items-center justify-center">
-                    <link.icon className="w-4 h-4 text-red-600" />
-                  </div>
-                  <div className="text-left">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider">{link.label}</p>
-                    <p className="text-foreground text-sm">{link.value}</p>
-                  </div>
+                <div className="w-16 h-16 border-2 border-red-600 flex items-center justify-center transition-all duration-300 group-hover:bg-red-600 group-hover:scale-110">
+                  <link.icon className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-red-600 group-hover:text-red-700 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <p className="text-sm text-foreground font-medium">{link.label}</p>
               </Link>
             ))}
-          </div>
-
-          <div 
-            className={`transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-            style={{ transitionDelay: "600ms" }}
-          >
-            <Button size="lg" className="gap-2 bg-red-600 hover:bg-red-700 text-white">
-              <Mail className="w-4 h-4 text-white" />
-              {t.contact.sendMessage}
-            </Button>
           </div>
         </div>
       </div>
