@@ -81,7 +81,7 @@ export function HeroSection() {
               }`}
               style={{ transitionDelay: "300ms" }}
             >
-              <Button asChild size="lg" className="gap-2 bg-red-600 hover:bg-red-700 text-white">
+              <Button asChild size="lg" className="gap-2 bg-red-600 hover:bg-red-700 text-white hover:scale-105 transition-transform">
                 <Link href="#proyectos">
                   {t.hero.viewProjects}
                   <ArrowRight className="w-4 h-4 text-white" />

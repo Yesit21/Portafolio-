@@ -2,19 +2,30 @@
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useLanguage } from "@/contexts/language-context"
+import { 
+  SiJava, 
+  SiPython, 
+  SiNextdotjs, 
+  SiReact, 
+  SiTailwindcss, 
+  SiMysql,
+  SiHtml5,
+  SiGit,
+} from "react-icons/si"
+import { TbApi, TbBrain, TbWorldWww } from "react-icons/tb"
 
 const technologies = [
-  { name: "Java", icon: "☕" },
-  { name: "Python", icon: "🐍" },
-  { name: "Next.js", icon: "▲" },
-  { name: "React", icon: "⚛️" },
-  { name: "Tailwind CSS", icon: "🎨" },
-  { name: "SQL", icon: "🗄️" },
-  { name: "HTML/CSS", icon: "🌐" },
-  { name: "Artificial Intelligence", icon: "🤖" },
-  { name: "Web Scraping", icon: "🕷️" },
-  { name: "Git", icon: "📦" },
-  { name: "RESTful APIs", icon: "🔌" },
+  { name: "Java", Icon: SiJava },
+  { name: "Python", Icon: SiPython },
+  { name: "Next.js", Icon: SiNextdotjs },
+  { name: "React", Icon: SiReact },
+  { name: "Tailwind CSS", Icon: SiTailwindcss },
+  { name: "SQL", Icon: SiMysql },
+  { name: "HTML/CSS", Icon: SiHtml5 },
+  { name: "Artificial Intelligence", Icon: TbBrain },
+  { name: "Web Scraping", Icon: TbWorldWww },
+  { name: "Git", Icon: SiGit },
+  { name: "RESTful APIs", Icon: TbApi },
 ]
 
 export function TechnologiesSection() {
@@ -49,18 +60,21 @@ export function TechnologiesSection() {
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          {technologies.map((tech, index) => (
-            <div
-              key={tech.name}
-              className={`px-4 py-2 bg-card border border-border text-sm text-foreground transition-all duration-500 hover:border-red-600 flex items-center gap-2 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
-              style={{ transitionDelay: `${index * 50 + 300}ms` }}
-            >
-              <span className="text-lg">{tech.icon}</span>
-              <span>{tech.name}</span>
-            </div>
-          ))}
+          {technologies.map((tech, index) => {
+            const IconComponent = tech.Icon
+            return (
+              <div
+                key={tech.name}
+                className={`px-4 py-2 bg-card border border-border text-sm text-foreground transition-all duration-500 hover:border-red-600 flex items-center gap-2 ${
+                  isVisible ? "opacity-100" : "opacity-0"
+                }`}
+                style={{ transitionDelay: `${index * 50 + 300}ms` }}
+              >
+                <IconComponent className="text-lg text-red-600" />
+                <span>{tech.name}</span>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
