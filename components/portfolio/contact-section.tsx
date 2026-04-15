@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import { useLanguage } from "@/contexts/language-context"
 
 const socialLinks = [
   {
@@ -22,6 +23,7 @@ const socialLinks = [
 
 export function ContactSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
+  const { t } = useLanguage()
 
   return (
     <section id="contacto" ref={ref} className="py-24 lg:py-32 bg-muted/30">
@@ -32,16 +34,16 @@ export function ContactSection() {
           }`}
         >
           <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-4">
-            Conectemos
+            {t.contact.label}
           </p>
           <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Contacto
+            {t.contact.title}
           </h2>
           <p className="text-lg text-muted-foreground mb-12 max-w-md mx-auto">
-            ¿Tienes un proyecto en mente o te gustaría colaborar? Estaré encantado de conversar contigo.
+            {t.contact.subtitle}
           </p>
 
           <div 
@@ -60,15 +62,15 @@ export function ContactSection() {
                 style={{ transitionDelay: `${index * 100 + 300}ms` }}
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 border border-border flex items-center justify-center">
-                    <link.icon className="w-4 h-4 text-foreground" />
+                  <div className="w-10 h-10 border border-red-600 flex items-center justify-center">
+                    <link.icon className="w-4 h-4 text-red-600" />
                   </div>
                   <div className="text-left">
                     <p className="text-xs text-muted-foreground uppercase tracking-wider">{link.label}</p>
                     <p className="text-foreground text-sm">{link.value}</p>
                   </div>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="w-4 h-4 text-red-600 group-hover:text-red-700 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             ))}
           </div>
@@ -80,8 +82,8 @@ export function ContactSection() {
             style={{ transitionDelay: "600ms" }}
           >
             <Button size="lg" className="gap-2 bg-red-600 hover:bg-red-700 text-white">
-              <Mail className="w-4 h-4" />
-              Enviar mensaje
+              <Mail className="w-4 h-4 text-white" />
+              {t.contact.sendMessage}
             </Button>
           </div>
         </div>
