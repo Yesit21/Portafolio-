@@ -83,11 +83,11 @@ export function Navbar() {
               variant="ghost"
               size="sm"
               onClick={() => setLanguage(language === "en" ? "es" : "en")}
-              className="px-2 text-2xl hover:opacity-80"
+              className="gap-2 text-red-600 hover:text-red-700"
               title={language === "en" ? "Cambiar a Español" : "Switch to English"}
             >
-              {language === "en" ? "🇪🇸" : "🇺🇸"}
-              <span className="sr-only">Change language</span>
+              <Languages className="h-4 w-4" />
+              <span className="text-xs font-medium">{language === "en" ? "ES" : "EN"}</span>
             </Button>
             <Button
               variant="ghost"
@@ -147,11 +147,11 @@ export function Navbar() {
                   variant="ghost"
                   size="sm"
                   onClick={() => setLanguage(language === "en" ? "es" : "en")}
-                  className="px-2 text-2xl hover:opacity-80"
+                  className="gap-2 text-red-600 hover:text-red-700"
                   title={language === "en" ? "Cambiar a Español" : "Switch to English"}
                 >
-                  {language === "en" ? "🇪🇸" : "🇺🇸"}
-                  <span className="sr-only">Change language</span>
+                  <Languages className="h-4 w-4" />
+                  <span className="text-xs font-medium">{language === "en" ? "ES" : "EN"}</span>
                 </Button>
                 <Button
                   variant="ghost"
