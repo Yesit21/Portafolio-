@@ -106,9 +106,11 @@ export function Navbar() {
               )}
               <span className="sr-only">Toggle theme</span>
             </Button>
-            <Button size="sm" variant="outline" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
-              <Download className="w-4 h-4" />
-              CV
+            <Button size="sm" variant="outline" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
+              <a href="/cv.pdf" download="Marlon_Andrade_CV.pdf">
+                <Download className="w-4 h-4" />
+                CV
+              </a>
             </Button>
           </div>
 
@@ -168,9 +170,11 @@ export function Navbar() {
                   )}
                   <span className="sr-only">Cambiar tema</span>
                 </Button>
-                <Button size="sm" variant="outline" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
-                  <Download className="w-4 h-4" />
-                  CV
+                <Button size="sm" variant="outline" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
+                  <a href="/cv.pdf" download="Marlon_Andrade_CV.pdf">
+                    <Download className="w-4 h-4" />
+                    CV
+                  </a>
                 </Button>
               </div>
             </div>
