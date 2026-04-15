@@ -48,13 +48,13 @@ export function SkillsSection() {
           {skillCategories.map((category, index) => (
             <div 
               key={category.title}
-              className={`bg-card border border-border p-8 transition-all duration-700 hover:border-foreground/20 ${
+              className={`bg-card border border-red-600/20 shadow-sm shadow-red-600/5 p-8 transition-all duration-700 hover:border-red-600/40 hover:shadow-red-600/10 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 100 + 200}ms` }}
             >
               <h3 
-                className="text-lg font-semibold text-foreground mb-6 pb-4 border-b border-border"
+                className="text-lg font-semibold text-foreground mb-6 pb-4 border-b border-red-600/20"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
                 {category.title}
@@ -66,7 +66,7 @@ export function SkillsSection() {
                     key={skill}
                     className="text-sm text-muted-foreground flex items-center gap-3"
                   >
-                    <span className="w-1 h-1 bg-foreground/40" />
+                    <span className="w-1.5 h-1.5 bg-red-600 rounded-full" />
                     {skill}
                   </li>
                 ))}
