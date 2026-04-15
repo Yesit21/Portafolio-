@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { LanguageProvider } from '@/contexts/language-context'
 import './globals.css'
 
 const inter = Inter({ 
@@ -15,8 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Marlon Andrade | Desarrollador de Software',
-  description: 'Portafolio de Marlon Andrade - Desarrollador apasionado por el software, la inteligencia artificial y la innovación tecnológica.',
+  title: 'Marlon Andrade | Software Developer',
+  description: 'Portfolio of Marlon Andrade - Developer focused on software, artificial intelligence and technological innovation.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -43,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
@@ -51,7 +52,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
         <Analytics />
       </body>
