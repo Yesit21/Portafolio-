@@ -3,6 +3,30 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useLanguage } from "@/contexts/language-context"
 import Image from "next/image"
+import { 
+  SiNextdotjs, 
+  SiReact, 
+  SiTailwindcss, 
+  SiTypescript,
+  SiJavascript,
+  SiMysql,
+} from "react-icons/si"
+import { Code2, Database, Server, Layers } from "lucide-react"
+
+const techIcons: { [key: string]: any } = {
+  "Next.js": SiNextdotjs,
+  "React": SiReact,
+  "Tailwind CSS": SiTailwindcss,
+  "TypeScript": SiTypescript,
+  "JavaScript": SiJavascript,
+  "Java": Code2,
+  "SQL": SiMysql,
+  "Databases": Database,
+  "CRUD": Database,
+  "REST API": Server,
+  "Backend": Server,
+  "Architecture": Layers,
+}
 
 export function ProjectsSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
@@ -82,14 +106,18 @@ export function ProjectsSection() {
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 text-xs text-muted-foreground border border-red-600/30 bg-red-600/5 rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {project.tags.map((tag) => {
+                    const IconComponent = techIcons[tag] || Code2
+                    return (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 text-xs text-muted-foreground border border-red-600/30 bg-red-600/5 rounded flex items-center gap-1.5"
+                      >
+                        <IconComponent className="w-3 h-3 text-red-600" />
+                        {tag}
+                      </span>
+                    )
+                  })}
                 </div>
               </div>
             </div>
