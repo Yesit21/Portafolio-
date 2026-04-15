@@ -3,7 +3,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useLanguage } from "@/contexts/language-context"
 import { 
-  SiJava, 
+  SiJavascript, 
   SiPython, 
   SiNextdotjs, 
   SiReact, 
@@ -11,21 +11,22 @@ import {
   SiMysql,
   SiHtml5,
   SiGit,
+  SiCplusplus,
 } from "react-icons/si"
-import { TbApi, TbBrain, TbWorldWww } from "react-icons/tb"
+import { Code2, Brain, Globe, Cpu } from "lucide-react"
 
 const technologies = [
-  { name: "Java", Icon: SiJava },
-  { name: "Python", Icon: SiPython },
-  { name: "Next.js", Icon: SiNextdotjs },
-  { name: "React", Icon: SiReact },
-  { name: "Tailwind CSS", Icon: SiTailwindcss },
-  { name: "SQL", Icon: SiMysql },
-  { name: "HTML/CSS", Icon: SiHtml5 },
-  { name: "Artificial Intelligence", Icon: TbBrain },
-  { name: "Web Scraping", Icon: TbWorldWww },
-  { name: "Git", Icon: SiGit },
-  { name: "RESTful APIs", Icon: TbApi },
+  { name: "Java", Icon: Code2, color: "#f89820" },
+  { name: "Python", Icon: SiPython, color: "#3776ab" },
+  { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
+  { name: "React", Icon: SiReact, color: "#61dafb" },
+  { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#06b6d4" },
+  { name: "SQL", Icon: SiMysql, color: "#4479a1" },
+  { name: "HTML/CSS", Icon: SiHtml5, color: "#e34f26" },
+  { name: "Artificial Intelligence", Icon: Brain, color: "#dc2626" },
+  { name: "Web Scraping", Icon: Globe, color: "#dc2626" },
+  { name: "Git", Icon: SiGit, color: "#f05032" },
+  { name: "RESTful APIs", Icon: Cpu, color: "#dc2626" },
 ]
 
 export function TechnologiesSection() {
@@ -65,12 +66,12 @@ export function TechnologiesSection() {
             return (
               <div
                 key={tech.name}
-                className={`px-4 py-2 bg-card border border-border text-sm text-foreground transition-all duration-500 hover:border-red-600 flex items-center gap-2 ${
+                className={`px-4 py-2 bg-card border border-border text-sm text-foreground transition-all duration-500 hover:border-red-600 hover:scale-105 flex items-center gap-2 ${
                   isVisible ? "opacity-100" : "opacity-0"
                 }`}
                 style={{ transitionDelay: `${index * 50 + 300}ms` }}
               >
-                <IconComponent className="text-lg text-red-600" />
+                <IconComponent className="text-lg" style={{ color: tech.color }} />
                 <span>{tech.name}</span>
               </div>
             )
