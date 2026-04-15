@@ -38,14 +38,28 @@ export function AboutSection() {
             {t.about.label}
           </p>
           <h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-8"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             {t.about.title}
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            {t.about.description}
-          </p>
+          <div className="space-y-4 text-left max-w-2xl mx-auto">
+            <p className="text-base text-foreground leading-relaxed font-medium">
+              {t.about.intro}
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              {t.about.specialization}
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              {t.about.music}
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              {t.about.racing}
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              {t.about.current}
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-px bg-border">

@@ -18,7 +18,11 @@ export const translations = {
     about: {
       label: "Profile",
       title: "About Me",
-      description: "I'm Marlon Andrade, a Software Engineering student and developer focused on creating functional, efficient, and well-structured technological solutions. I specialize in software development, artificial intelligence, and systems design, always seeking a balance between performance, clarity, and scalability. Since the age of 9, I discovered my interest in songwriting, a practice that has strengthened my creativity and ability to structure ideas. Likewise, my affinity for motorcycles emerged at an early age, and since I was 14, I have participated in races, an experience that has contributed to developing discipline, concentration, and decision-making skills under pressure. Currently, I combine my academic training with the development of personal projects, integrating both logical thinking and creativity into every solution I build.",
+      intro: "I'm Marlon Andrade, a Software Engineering student and developer focused on creating functional, efficient, and well-structured technological solutions.",
+      specialization: "I specialize in software development, artificial intelligence, and systems design, always seeking a balance between performance, clarity, and scalability.",
+      music: "Since the age of 9, I discovered my interest in songwriting, a practice that has strengthened my creativity and ability to structure ideas.",
+      racing: "My affinity for motorcycles emerged at an early age, and since I was 14, I have participated in races, an experience that has contributed to developing discipline, concentration, and decision-making skills under pressure.",
+      current: "Currently, I combine my academic training with the development of personal projects, integrating both logical thinking and creativity into every solution I build.",
       highlights: {
         software: {
           title: "Software Development",
@@ -118,7 +122,11 @@ export const translations = {
     about: {
       label: "Perfil",
       title: "Sobre mí",
-      description: "Soy Marlon Andrade, estudiante de Ingeniería de Software y desarrollador enfocado en la creación de soluciones tecnológicas funcionales, eficientes y bien estructuradas. Me especializo en desarrollo de software, inteligencia artificial y diseño de sistemas, buscando siempre un equilibrio entre rendimiento, claridad y escalabilidad. Desde los 9 años descubrí mi interés por la composición de letras de canciones, una práctica que ha fortalecido mi creatividad y mi capacidad de estructurar ideas. Asimismo, mi afinidad por las motocicletas surge desde temprana edad, y desde los 14 años participo en carreras, experiencia que ha contribuido a desarrollar disciplina, concentración y capacidad de toma de decisiones bajo presión. Actualmente, combino mi formación académica con el desarrollo de proyectos personales, integrando tanto el pensamiento lógico como la creatividad en cada solución que construyo.",
+      intro: "Soy Marlon Andrade, estudiante de Ingeniería de Software y desarrollador enfocado en la creación de soluciones tecnológicas funcionales, eficientes y bien estructuradas.",
+      specialization: "Me especializo en desarrollo de software, inteligencia artificial y diseño de sistemas, buscando siempre un equilibrio entre rendimiento, claridad y escalabilidad.",
+      music: "Desde los 9 años descubrí mi interés por la composición de letras de canciones, una práctica que ha fortalecido mi creatividad y mi capacidad de estructurar ideas.",
+      racing: "Mi afinidad por las motocicletas surge desde temprana edad, y desde los 14 años participo en carreras, experiencia que ha contribuido a desarrollar disciplina, concentración y capacidad de toma de decisiones bajo presión.",
+      current: "Actualmente, combino mi formación académica con el desarrollo de proyectos personales, integrando tanto el pensamiento lógico como la creatividad en cada solución que construyo.",
       highlights: {
         software: {
           title: "Desarrollo de Software",
