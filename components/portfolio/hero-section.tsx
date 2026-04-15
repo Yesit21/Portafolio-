@@ -21,7 +21,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Avatar/Image */}
           <div 
-            className={`order-2 lg:order-1 flex justify-center lg:justify-start transition-all duration-1000 ${
+            className={`order-1 flex justify-center lg:justify-start transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
             style={{ transitionDelay: "300ms" }}
@@ -41,7 +41,7 @@ export function HeroSection() {
           </div>
 
           {/* Content */}
-          <div className="order-1 lg:order-2 space-y-6">
+          <div className="order-2 space-y-6">
             <div 
               className={`space-y-4 transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
