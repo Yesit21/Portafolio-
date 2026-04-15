@@ -3,27 +3,29 @@
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-
-const projects = [
-  {
-    title: "Portafolio Personal",
-    description: "Sitio web profesional desarrollado con Next.js y Tailwind CSS, diseñado para presentar proyectos, habilidades y trayectoria como desarrollador de software.",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-  },
-  {
-    title: "Sistema de Gestión Académica",
-    description: "Aplicación completa para administrar estudiantes, cursos y calificaciones, implementando operaciones CRUD con base de datos relacional e interfaz intuitiva.",
-    tags: ["Java", "SQL", "Bases de Datos", "CRUD"],
-  },
-  {
-    title: "API REST con Java",
-    description: "Servicio backend robusto con endpoints RESTful para gestión de recursos, aplicando principios de arquitectura de software y buenas prácticas de desarrollo.",
-    tags: ["Java", "API REST", "Backend", "Arquitectura"],
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 export function ProjectsSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
+  const { t } = useLanguage()
+
+  const projects = [
+    {
+      title: t.projects.items.portfolio.title,
+      description: t.projects.items.portfolio.description,
+      tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    },
+    {
+      title: t.projects.items.academic.title,
+      description: t.projects.items.academic.description,
+      tags: ["Java", "SQL", "Databases", "CRUD"],
+    },
+    {
+      title: t.projects.items.api.title,
+      description: t.projects.items.api.description,
+      tags: ["Java", "REST API", "Backend", "Architecture"],
+    },
+  ]
 
   return (
     <section id="proyectos" ref={ref} className="py-24 lg:py-32">
@@ -34,16 +36,16 @@ export function ProjectsSection() {
           }`}
         >
           <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-4">
-            Portafolio
+            {t.projects.label}
           </p>
           <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Proyectos
+            {t.projects.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Una selección de proyectos en los que he trabajado, combinando tecnología y creatividad.
+            {t.projects.subtitle}
           </p>
         </div>
 
@@ -83,8 +85,8 @@ export function ProjectsSection() {
                   ))}
                 </div>
                 <Button variant="ghost" size="sm" className="gap-2 p-0 h-auto hover:bg-transparent text-red-600 hover:text-red-700 group/btn">
-                  Ver proyecto
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                  {t.projects.viewProject}
+                  <ArrowUpRight className="w-4 h-4 text-red-600 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </Button>
               </div>
             </div>
