@@ -72,7 +72,7 @@ export const translations = {
       subtitle: "Tools and technologies I use in my daily work.",
     },
     education: {
-      label: "Journey",
+      label: "",
       title: "Education",
       subtitle: "My academic journey and professional training.",
       university: {
@@ -176,7 +176,7 @@ export const translations = {
       subtitle: "Herramientas y tecnologías que utilizo en mi trabajo diario.",
     },
     education: {
-      label: "Trayectoria",
+      label: "",
       title: "Educación",
       subtitle: "Mi trayectoria académica y formación profesional.",
       university: {
