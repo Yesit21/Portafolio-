@@ -18,7 +18,7 @@ export const translations = {
     about: {
       label: "Profile",
       title: "About Me",
-      description: "I'm Marlon Andrade, a developer focused on creating functional and well-structured technological solutions. I work with software development, artificial intelligence and systems design. Motorcycle racing and music composition bring different perspectives to my technical approach.",
+      description: "I'm Marlon Andrade, a Software Engineering student and developer focused on creating functional, efficient, and well-structured technological solutions. I specialize in software development, artificial intelligence, and systems design, always seeking a balance between performance, clarity, and scalability. Since the age of 9, I discovered my interest in songwriting, a practice that has strengthened my creativity and ability to structure ideas. Likewise, my affinity for motorcycles emerged at an early age, and since I was 14, I have participated in races, an experience that has contributed to developing discipline, concentration, and decision-making skills under pressure. Currently, I combine my academic training with the development of personal projects, integrating both logical thinking and creativity into every solution I build.",
       highlights: {
         software: {
           title: "Software Development",
@@ -118,7 +118,7 @@ export const translations = {
     about: {
       label: "Perfil",
       title: "Sobre mí",
-      description: "Soy Marlon Andrade, desarrollador enfocado en crear soluciones tecnológicas funcionales y bien estructuradas. Me dedico al desarrollo de software, inteligencia artificial y diseño de sistemas. Las carreras de motos y la composición musical aportan perspectivas diferentes a mi enfoque técnico.",
+      description: "Soy Marlon Andrade, estudiante de Ingeniería de Software y desarrollador enfocado en la creación de soluciones tecnológicas funcionales, eficientes y bien estructuradas. Me especializo en desarrollo de software, inteligencia artificial y diseño de sistemas, buscando siempre un equilibrio entre rendimiento, claridad y escalabilidad. Desde los 9 años descubrí mi interés por la composición de letras de canciones, una práctica que ha fortalecido mi creatividad y mi capacidad de estructurar ideas. Asimismo, mi afinidad por las motocicletas surge desde temprana edad, y desde los 14 años participo en carreras, experiencia que ha contribuido a desarrollar disciplina, concentración y capacidad de toma de decisiones bajo presión. Actualmente, combino mi formación académica con el desarrollo de proyectos personales, integrando tanto el pensamiento lógico como la creatividad en cada solución que construyo.",
       highlights: {
         software: {
           title: "Desarrollo de Software",
