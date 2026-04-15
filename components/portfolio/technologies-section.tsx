@@ -4,17 +4,17 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useLanguage } from "@/contexts/language-context"
 
 const technologies = [
-  "Java",
-  "Python",
-  "Next.js",
-  "React",
-  "Tailwind CSS",
-  "SQL",
-  "HTML/CSS",
-  "Artificial Intelligence",
-  "Web Scraping",
-  "Git",
-  "RESTful APIs",
+  { name: "Java", icon: "☕" },
+  { name: "Python", icon: "🐍" },
+  { name: "Next.js", icon: "▲" },
+  { name: "React", icon: "⚛️" },
+  { name: "Tailwind CSS", icon: "🎨" },
+  { name: "SQL", icon: "🗄️" },
+  { name: "HTML/CSS", icon: "🌐" },
+  { name: "Artificial Intelligence", icon: "🤖" },
+  { name: "Web Scraping", icon: "🕷️" },
+  { name: "Git", icon: "📦" },
+  { name: "RESTful APIs", icon: "🔌" },
 ]
 
 export function TechnologiesSection() {
@@ -51,13 +51,14 @@ export function TechnologiesSection() {
         >
           {technologies.map((tech, index) => (
             <div
-              key={tech}
-              className={`px-4 py-2 bg-card border border-border text-sm text-foreground transition-all duration-500 hover:border-foreground/30 ${
+              key={tech.name}
+              className={`px-4 py-2 bg-card border border-border text-sm text-foreground transition-all duration-500 hover:border-red-600 flex items-center gap-2 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}
               style={{ transitionDelay: `${index * 50 + 300}ms` }}
             >
-              {tech}
+              <span className="text-lg">{tech.icon}</span>
+              <span>{tech.name}</span>
             </div>
           ))}
         </div>
