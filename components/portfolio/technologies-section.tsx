@@ -1,6 +1,7 @@
 "use client"
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import { useLanguage } from "@/contexts/language-context"
 
 const technologies = [
   "Java",
@@ -10,14 +11,15 @@ const technologies = [
   "Tailwind CSS",
   "SQL",
   "HTML/CSS",
-  "Inteligencia Artificial",
+  "Artificial Intelligence",
   "Web Scraping",
   "Git",
-  "APIs RESTful",
+  "RESTful APIs",
 ]
 
 export function TechnologiesSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
+  const { t } = useLanguage()
 
   return (
     <section ref={ref} className="py-24 lg:py-32">
@@ -28,16 +30,16 @@ export function TechnologiesSection() {
           }`}
         >
           <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-4">
-            Stack
+            {t.technologies.label}
           </p>
           <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Tecnologías
+            {t.technologies.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Herramientas y tecnologías que utilizo en mi trabajo diario.
+            {t.technologies.subtitle}
           </p>
         </div>
 
