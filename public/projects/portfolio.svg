@@ -1,14 +1,58 @@
 <svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:1" />
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="url(#grad1)"/>
-  <text x="400" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Portfolio</text>
-  <text x="400" y="250" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">Next.js + Tailwind CSS</text>
-  <circle cx="150" cy="350" r="30" fill="rgba(255,255,255,0.2)"/>
-  <circle cx="400" cy="380" r="40" fill="rgba(255,255,255,0.15)"/>
-  <circle cx="650" cy="340" r="35" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="512" cy="90" r="8" fill="white" opacity="0.8"/>
+  <circle cx="512" cy="110" r="3" fill="white" opacity="0.5"/>
+  <circle cx="830" cy="340" r="6" fill="white" opacity="0.3"/>
+  <circle cx="850" cy="360" r="4" fill="white" opacity="0.4"/>
+  <circle cx="870" cy="380" r="5" fill="white" opacity="0.3"/>
+  <circle cx="190" cy="480" r="40" fill="#dc2626" opacity="0.6"/>
+  <circle cx="900" cy="380" r="8" fill="#dc2626" opacity="0.4"/>
+  
+  <!-- Text PORT -->
+  <text x="400" y="200" font-family="Arial Black, sans-serif" font-size="120" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-5">PORT</text>
+  
+  <!-- Text FOLIO -->
+  <text x="400" y="320" font-family="Arial Black, sans-serif" font-size="120" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-5">FOLIO</text>
+  
+  <!-- Fish shape (simplified goldfish) -->
+  <g transform="translate(480, 260)">
+    <!-- Fish body -->
+    <ellipse cx="0" cy="0" rx="80" ry="50" fill="url(#fishGrad)" opacity="0.9"/>
+    <!-- Fish tail -->
+    <path d="M -80 -10 L -140 -40 L -130 0 L -140 40 L -80 10 Z" fill="url(#fishGrad)" opacity="0.85"/>
+    <!-- Fish fins -->
+    <path d="M -20 30 L -30 70 L 0 40 Z" fill="url(#fishGrad)" opacity="0.8"/>
+    <path d="M 20 -30 L 30 -60 L 35 -20 Z" fill="url(#fishGrad)" opacity="0.8"/>
+    <!-- Fish eye -->
+    <circle cx="50" cy="-10" r="8" fill="white"/>
+    <circle cx="52" cy="-10" r="4" fill="#1e293b"/>
+    <!-- Fish details (lines) -->
+    <line x1="-40" y1="-20" x2="40" y2="-15" stroke="white" stroke-width="1" opacity="0.3"/>
+    <line x1="-40" y1="0" x2="40" y2="0" stroke="white" stroke-width="1" opacity="0.3"/>
+    <line x1="-40" y1="20" x2="40" y2="15" stroke="white" stroke-width="1" opacity="0.3"/>
+  </g>
+  
+  <!-- Small label -->
+  <rect x="665" y="180" width="90" height="25" fill="#dc2626" opacity="0.8"/>
+  <text x="710" y="197" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">CURRICULUM</text>
+  <text x="710" y="207" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">VITAE</text>
+  
+  <!-- Brand name -->
+  <text x="30" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" letter-spacing="2">POLLES</text>
+  <rect x="25" y="48" width="80" height="2" fill="white"/>
 </svg>
