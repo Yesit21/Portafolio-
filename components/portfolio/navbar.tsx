@@ -2,21 +2,23 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Download, Moon, Sun } from "lucide-react"
+import { Menu, X, Download, Moon, Sun, Languages } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useLanguage } from "@/contexts/language-context"
 
 const navItems = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Sobre mí", href: "#sobre-mi" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Habilidades", href: "#habilidades" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "nav.home", href: "#inicio" },
+  { label: "nav.about", href: "#sobre-mi" },
+  { label: "nav.projects", href: "#proyectos" },
+  { label: "nav.skills", href: "#habilidades" },
+  { label: "nav.contact", href: "#contacto" },
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { theme, setTheme } = useTheme()
+  const { language, setLanguage, t } = useLanguage()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -74,14 +76,23 @@ export function Navbar() {
                 onClick={(e) => handleSmoothScroll(e, item.href)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               >
-                {item.label}
+                {item.label.split('.').reduce((obj: any, key) => obj[key], t)}
               </a>
             ))}
             <Button
               variant="ghost"
               size="sm"
+              onClick={() => setLanguage(language === "en" ? "es" : "en")}
+              className="px-3 text-red-600 hover:text-red-700 font-semibold"
+            >
+              {language === "en" ? "ES" : "EN"}
+              <span className="sr-only">Change language</span>
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="w-9 px-0"
+              className="w-9 px-0 text-red-600 hover:text-red-700"
             >
               {mounted && (
                 <>
@@ -92,7 +103,7 @@ export function Navbar() {
                   )}
                 </>
               )}
-              <span className="sr-only">Cambiar tema</span>
+              <span className="sr-only">Toggle theme</span>
             </Button>
             <Button size="sm" variant="outline" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
               <Download className="w-4 h-4" />
@@ -125,15 +136,24 @@ export function Navbar() {
                   onClick={(e) => handleSmoothScroll(e, item.href)}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors py-3 px-2 cursor-pointer"
                 >
-                  {item.label}
+                  {item.label.split('.').reduce((obj: any, key) => obj[key], t)}
                 </a>
               ))}
               <div className="flex gap-2 mt-2">
                 <Button
                   variant="ghost"
                   size="sm"
+                  onClick={() => setLanguage(language === "en" ? "es" : "en")}
+                  className="px-3 text-red-600 hover:text-red-700 font-semibold"
+                >
+                  {language === "en" ? "ES" : "EN"}
+                  <span className="sr-only">Change language</span>
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="w-9 px-0"
+                  className="w-9 px-0 text-red-600 hover:text-red-700"
                 >
                   {mounted && (
                     <>
