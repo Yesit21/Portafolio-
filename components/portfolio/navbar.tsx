@@ -52,7 +52,7 @@ export function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ? "bg-background/95 backdrop-blur-sm border-b border-border" 
-          : "bg-transparent"
+          : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,23 +124,23 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         <div 
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          className={`md:hidden overflow-hidden transition-all duration-300 bg-background/98 backdrop-blur-md ${
+            isOpen ? "max-h-80 opacity-100 border-b border-border" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="py-4 border-t border-border bg-background">
+          <div className="py-4">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleSmoothScroll(e, item.href)}
-                  className="text-sm text-red-600 hover:text-red-700 transition-colors py-3 px-2 cursor-pointer font-medium"
+                  className="text-sm text-red-600 hover:text-red-700 hover:bg-muted/50 transition-colors py-3 px-4 cursor-pointer font-medium rounded"
                 >
                   {item.label.split('.').reduce((obj: any, key) => obj[key], t)}
                 </a>
               ))}
-              <div className="flex gap-2 mt-2 px-2">
+              <div className="flex gap-2 mt-2 px-4">
                 <Button
                   variant="ghost"
                   size="sm"
