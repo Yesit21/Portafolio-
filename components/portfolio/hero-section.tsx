@@ -27,7 +27,7 @@ export function HeroSection() {
             style={{ transitionDelay: "300ms" }}
           >
             <div className="relative">
-                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-[12px] border-muted bg-muted flex items-center justify-center shadow-lg">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-[12px] border-gray-300 dark:border-gray-700 bg-gray-300 dark:bg-gray-700 flex items-center justify-center shadow-lg">
                   <Image
                     src="/face.webp"
                     alt="Marlon Yesid Andrade"
