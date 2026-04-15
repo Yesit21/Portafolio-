@@ -63,9 +63,6 @@ export function EducationSection() {
               
               {/* Content */}
               <div className="bg-card border border-border p-6 transition-all duration-300 hover:border-red-600/30">
-                <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2">
-                  {item.period}
-                </p>
                 <h3 
                   className="text-lg font-semibold text-foreground mb-3"
                   style={{ fontFamily: 'var(--font-heading)' }}
