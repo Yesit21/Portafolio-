@@ -53,11 +53,6 @@ export function EducationSection() {
               }`}
               style={{ transitionDelay: `${index * 150 + 200}ms` }}
             >
-              {/* Timeline line */}
-              {index < timeline.length - 1 && (
-                <div className="absolute left-0 top-0 bottom-0 w-px bg-border" />
-              )}
-              
               {/* Timeline dot */}
               <div className="absolute left-[-4px] top-2 w-2 h-2 bg-red-600 rounded-full" />
               
