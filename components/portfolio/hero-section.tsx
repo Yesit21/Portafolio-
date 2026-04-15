@@ -16,7 +16,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section id="inicio" className="min-h-screen flex items-center py-12">
+    <section id="inicio" className="min-h-screen flex items-center pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Avatar/Image */}

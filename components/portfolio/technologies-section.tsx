@@ -34,7 +34,7 @@ export function TechnologiesSection() {
   const { t } = useLanguage()
 
   return (
-    <section ref={ref} className="py-24 lg:py-32">
+    <section id="tecnologias" ref={ref} className="py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className={`max-w-3xl mx-auto text-center mb-16 transition-all duration-700 ${
