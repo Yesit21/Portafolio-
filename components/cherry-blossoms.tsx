@@ -168,7 +168,7 @@ export function CherryBlossoms() {
             />
             
             {/* Branches */}
-            {lightning.branches.map((branch, idx) => (
+            {lightning.branches && lightning.branches.map((branch, idx) => (
               <g key={idx}>
                 {/* Branch glow */}
                 <path
