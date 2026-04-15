@@ -1,20 +1,77 @@
 <svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
     </linearGradient>
+    <radialGradient id="glowRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fecaca;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#fca5a5;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#f87171;stop-opacity:0" />
+    </radialGradient>
   </defs>
-  <rect width="800" height="450" fill="url(#grad3)"/>
-  <text x="400" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">REST API</text>
-  <text x="400" y="250" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">Java Backend Service</text>
-  <line x1="200" y1="350" x2="300" y2="350" stroke="rgba(255,255,255,0.3)" stroke-width="4"/>
-  <line x1="300" y1="350" x2="400" y2="320" stroke="rgba(255,255,255,0.3)" stroke-width="4"/>
-  <line x1="400" y1="320" x2="500" y2="350" stroke="rgba(255,255,255,0.3)" stroke-width="4"/>
-  <line x1="500" y1="350" x2="600" y2="350" stroke="rgba(255,255,255,0.3)" stroke-width="4"/>
-  <circle cx="200" cy="350" r="15" fill="white"/>
-  <circle cx="300" cy="350" r="15" fill="white"/>
-  <circle cx="400" cy="320" r="20" fill="white"/>
-  <circle cx="500" cy="350" r="15" fill="white"/>
-  <circle cx="600" cy="350" r="15" fill="white"/>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Red glow behind logo -->
+  <circle cx="400" cy="180" r="120" fill="url(#glowRed)"/>
+  
+  <!-- Logo diamond shape rotated -->
+  <g transform="translate(400, 180) rotate(45)">
+    <rect x="-60" y="-60" width="120" height="120" fill="#1a1a1a" rx="8"/>
+    
+    <!-- Corner brackets -->
+    <g transform="rotate(-45)">
+      <!-- Top left bracket -->
+      <path d="M -75 -75 L -55 -75 M -75 -75 L -75 -55" stroke="#dc2626" stroke-width="3" fill="none"/>
+      <!-- Top right bracket -->
+      <path d="M 75 -75 L 55 -75 M 75 -75 L 75 -55" stroke="#dc2626" stroke-width="3" fill="none"/>
+      <!-- Bottom left bracket -->
+      <path d="M -75 75 L -55 75 M -75 75 L -75 55" stroke="#dc2626" stroke-width="3" fill="none"/>
+      <!-- Bottom right bracket -->
+      <path d="M 75 75 L 55 75 M 75 75 L 75 55" stroke="#dc2626" stroke-width="3" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- NTX text on diamond -->
+  <text x="400" y="195" font-family="Arial Black, sans-serif" font-size="56" font-weight="900" fill="white" text-anchor="middle">
+    <tspan fill="#dc2626">N</tspan><tspan fill="white">T</tspan><tspan fill="white">X</tspan>
+  </text>
+  
+  <!-- REST API text -->
+  <text x="400" y="360" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" text-anchor="middle">
+    <tspan fill="#b91c1c">REST API</tspan>
+    <tspan fill="#1a1a1a"> Design</tspan>
+  </text>
+  
+  <!-- Decorative elements -->
+  <!-- Top left corner -->
+  <line x1="50" y1="50" x2="120" y2="50" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="50" y1="50" x2="50" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+  
+  <!-- Top right corner -->
+  <line x1="750" y1="50" x2="680" y2="50" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="750" y1="50" x2="750" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+  
+  <!-- Bottom left corner -->
+  <line x1="50" y1="400" x2="120" y2="400" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="50" y1="400" x2="50" y2="330" stroke="#cbd5e1" stroke-width="2"/>
+  
+  <!-- Bottom right corner -->
+  <line x1="750" y1="400" x2="680" y2="400" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="750" y1="400" x2="750" y2="330" stroke="#cbd5e1" stroke-width="2"/>
+  
+  <!-- Small accent dots -->
+  <circle cx="150" cy="100" r="4" fill="#dc2626" opacity="0.3"/>
+  <circle cx="650" cy="100" r="4" fill="#dc2626" opacity="0.3"/>
+  <circle cx="150" cy="350" r="4" fill="#dc2626" opacity="0.3"/>
+  <circle cx="650" cy="350" r="4" fill="#dc2626" opacity="0.3"/>
+  
+  <!-- Connection lines subtle -->
+  <line x1="200" y1="180" x2="280" y2="180" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="520" y1="180" x2="600" y2="180" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <circle cx="200" cy="180" r="6" fill="#94a3b8"/>
+  <circle cx="600" cy="180" r="6" fill="#94a3b8"/>
 </svg>
