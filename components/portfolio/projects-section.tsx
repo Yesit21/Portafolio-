@@ -55,13 +55,13 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className={`group bg-card border-2 border-red-600 transition-all duration-700 hover:border-red-700 overflow-hidden ${
+              className={`group bg-card border border-red-600/30 shadow-lg shadow-red-600/10 transition-all duration-700 hover:border-red-600/50 hover:shadow-red-600/20 overflow-hidden ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 100 + 200}ms` }}
             >
               {/* Project Image */}
-              <div className="aspect-video bg-muted border-b-2 border-red-600 relative overflow-hidden">
+              <div className="aspect-video bg-muted border-b border-red-600/30 relative overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
