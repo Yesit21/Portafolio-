@@ -129,10 +129,10 @@ export function Navbar() {
         {/* Mobile Navigation */}
         <div 
           className={`md:hidden overflow-hidden transition-all duration-300 bg-background/98 backdrop-blur-md ${
-            isOpen ? "max-h-80 opacity-100 border-b border-border" : "max-h-0 opacity-0"
+            isOpen ? "max-h-[500px] opacity-100 border-b border-border" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="py-4">
+          <div className="py-4 max-h-[450px] overflow-y-auto">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <a
@@ -144,12 +144,12 @@ export function Navbar() {
                   {item.label.split('.').reduce((obj: any, key) => obj[key], t)}
                 </a>
               ))}
-              <div className="flex gap-2 mt-2 px-4">
+              <div className="flex flex-wrap gap-2 mt-4 px-4 pt-4 border-t border-border">
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={() => setLanguage(language === "en" ? "es" : "en")}
-                  className="gap-2 text-red-600 hover:text-red-700"
+                  className="gap-2 text-red-600 hover:text-red-700 flex-1"
                   title={language === "en" ? "Cambiar a Español" : "Switch to English"}
                 >
                   <Languages className="h-4 w-4" />
@@ -159,23 +159,31 @@ export function Navbar() {
                   variant="ghost"
                   size="sm"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="w-9 px-0 text-red-600 hover:text-red-700"
+                  className="gap-2 text-red-600 hover:text-red-700 flex-1"
                 >
                   {mounted && (
                     <>
                       {theme === "dark" ? (
-                        <Sun className="h-4 w-4" />
+                        <>
+                          <Sun className="h-4 w-4" />
+                          <span className="text-xs font-medium">Light</span>
+                        </>
                       ) : (
-                        <Moon className="h-4 w-4" />
+                        <>
+                          <Moon className="h-4 w-4" />
+                          <span className="text-xs font-medium">Dark</span>
+                        </>
                       )}
                     </>
                   )}
                   <span className="sr-only">Cambiar tema</span>
                 </Button>
-                <Button size="sm" variant="outline" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white" asChild>
+              </div>
+              <div className="px-4 mt-2">
+                <Button size="sm" variant="outline" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white w-full" asChild>
                   <a href="/cv.pdf" download="Marlon_Andrade_CV.pdf">
                     <Download className="w-4 h-4" />
-                    CV
+                    Descargar CV
                   </a>
                 </Button>
               </div>
