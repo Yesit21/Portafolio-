@@ -1,24 +1,26 @@
 "use client"
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-
-const skillCategories = [
-  {
-    title: "Frontend",
-    skills: ["Next.js", "React", "HTML/CSS", "Tailwind CSS", "UI/UX"],
-  },
-  {
-    title: "Backend",
-    skills: ["Java", "Python", "APIs RESTful", "Arquitectura de Software"],
-  },
-  {
-    title: "Bases de Datos",
-    skills: ["SQL", "Modelado E-R", "Diseño de BD", "Integridad de Datos"],
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 export function SkillsSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
+  const { t } = useLanguage()
+
+  const skillCategories = [
+    {
+      title: t.skills.frontend,
+      skills: ["Next.js", "React", "HTML/CSS", "Tailwind CSS", "UI/UX"],
+    },
+    {
+      title: t.skills.backend,
+      skills: ["Java", "Python", "RESTful APIs", "Software Architecture"],
+    },
+    {
+      title: t.skills.databases,
+      skills: ["SQL", "E-R Modeling", "Database Design", "Data Integrity"],
+    },
+  ]
 
   return (
     <section id="habilidades" ref={ref} className="py-24 lg:py-32 bg-muted/30">
@@ -29,16 +31,16 @@ export function SkillsSection() {
           }`}
         >
           <p className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-4">
-            Competencias
+            {t.skills.label}
           </p>
           <h2 
             className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Habilidades
+            {t.skills.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Tecnologías y competencias que domino y aplico en mis proyectos.
+            {t.skills.subtitle}
           </p>
         </div>
 
