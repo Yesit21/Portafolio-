@@ -128,7 +128,7 @@ export function Navbar() {
             isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="py-4 border-t border-border">
+          <div className="py-4 border-t border-border bg-background">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <a
@@ -140,7 +140,7 @@ export function Navbar() {
                   {item.label.split('.').reduce((obj: any, key) => obj[key], t)}
                 </a>
               ))}
-              <div className="flex gap-2 mt-2">
+              <div className="flex gap-2 mt-2 px-2">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -168,7 +168,7 @@ export function Navbar() {
                   )}
                   <span className="sr-only">Cambiar tema</span>
                 </Button>
-                <Button size="sm" variant="outline" className="gap-2">
+                <Button size="sm" variant="outline" className="gap-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
                   <Download className="w-4 h-4" />
                   CV
                 </Button>
