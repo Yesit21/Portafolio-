@@ -125,3 +125,51 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Lightning Animation */
+@keyframes lightning-strike {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scaleY(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 30%, 50% {
+    opacity: 1;
+  }
+  20%, 40% {
+    opacity: 0.5;
+  }
+}
+
+.animate-lightning-strike {
+  animation: lightning-strike ease-out forwards;
+}
+
+.animate-flash {
+  animation: flash ease-out forwards;
+}
