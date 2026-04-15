@@ -1,6 +1,7 @@
 "use client"
 
-import { Mail, Linkedin, Send } from "lucide-react"
+import { Linkedin, Send } from "lucide-react"
+import { FaWhatsapp, FaGithub } from "react-icons/fa"
 import Link from "next/link"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useLanguage } from "@/contexts/language-context"
@@ -9,14 +10,19 @@ import { useState } from "react"
 
 const socialLinks = [
   {
-    icon: Mail,
-    label: "Gmail",
-    href: "mailto:yesitandrade24@gmail.com",
+    icon: FaWhatsapp,
+    label: "WhatsApp",
+    href: "https://wa.me/573135520191",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/marlon-andrade-4a60313ba/",
+  },
+  {
+    icon: FaGithub,
+    label: "GitHub",
+    href: "https://github.com/Yesit21",
   },
 ]
 
