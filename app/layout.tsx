@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { LanguageProvider } from '@/contexts/language-context'
 import { CherryBlossoms } from '@/components/cherry-blossoms'
+import { CursorTrail } from '@/components/cursor-trail'
 import './globals.css'
 
 const inter = Inter({ 
@@ -55,6 +56,7 @@ export default function RootLayout({
         >
           <LanguageProvider>
             <CherryBlossoms />
+            <CursorTrail />
             {children}
           </LanguageProvider>
         </ThemeProvider>
