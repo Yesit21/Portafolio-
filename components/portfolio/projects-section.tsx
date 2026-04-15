@@ -1,9 +1,8 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { ArrowUpRight } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useLanguage } from "@/contexts/language-context"
+import Image from "next/image"
 
 export function ProjectsSection() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>()
@@ -14,16 +13,19 @@ export function ProjectsSection() {
       title: t.projects.items.portfolio.title,
       description: t.projects.items.portfolio.description,
       tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+      image: "/projects/portfolio.svg",
     },
     {
       title: t.projects.items.academic.title,
       description: t.projects.items.academic.description,
       tags: ["Java", "SQL", "Databases", "CRUD"],
+      image: "/projects/academic.svg",
     },
     {
       title: t.projects.items.api.title,
       description: t.projects.items.api.description,
       tags: ["Java", "REST API", "Backend", "Architecture"],
+      image: "/projects/api.svg",
     },
   ]
 
@@ -53,14 +55,19 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className={`group bg-card border-2 border-red-600 transition-all duration-700 hover:border-red-700 ${
+              className={`group bg-card border-2 border-red-600 transition-all duration-700 hover:border-red-700 overflow-hidden ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 100 + 200}ms` }}
             >
-              {/* Project Preview */}
-              <div className="aspect-video bg-muted border-b-2 border-red-600 flex items-center justify-center">
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">Preview</span>
+              {/* Project Image */}
+              <div className="aspect-video bg-muted border-b-2 border-red-600 relative overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
               </div>
               
               {/* Project Info */}
@@ -84,10 +91,6 @@ export function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-                <Button variant="ghost" size="sm" className="gap-2 p-0 h-auto hover:bg-transparent text-red-600 hover:text-red-700 group/btn">
-                  {t.projects.viewProject}
-                  <ArrowUpRight className="w-4 h-4 text-red-600 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-                </Button>
               </div>
             </div>
           ))}
