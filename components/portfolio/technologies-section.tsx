@@ -16,17 +16,17 @@ import {
 import { Code2, Brain, Globe, Cpu } from "lucide-react"
 
 const technologies = [
-  { name: "Java", Icon: Code2, color: "#f89820" },
-  { name: "Python", Icon: SiPython, color: "#3776ab" },
-  { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
-  { name: "React", Icon: SiReact, color: "#61dafb" },
-  { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#06b6d4" },
-  { name: "SQL", Icon: SiMysql, color: "#4479a1" },
-  { name: "HTML/CSS", Icon: SiHtml5, color: "#e34f26" },
-  { name: "Artificial Intelligence", Icon: Brain, color: "#dc2626" },
-  { name: "Web Scraping", Icon: Globe, color: "#dc2626" },
-  { name: "Git", Icon: SiGit, color: "#f05032" },
-  { name: "RESTful APIs", Icon: Cpu, color: "#dc2626" },
+  { name: "Java", Icon: Code2, color: "#ef4444" },
+  { name: "Python", Icon: SiPython, color: "#ef4444" },
+  { name: "Next.js", Icon: SiNextdotjs, color: "#ef4444" },
+  { name: "React", Icon: SiReact, color: "#ef4444" },
+  { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#ef4444" },
+  { name: "SQL", Icon: SiMysql, color: "#ef4444" },
+  { name: "HTML/CSS", Icon: SiHtml5, color: "#ef4444" },
+  { name: "Artificial Intelligence", Icon: Brain, color: "#ef4444" },
+  { name: "Web Scraping", Icon: Globe, color: "#ef4444" },
+  { name: "Git", Icon: SiGit, color: "#ef4444" },
+  { name: "RESTful APIs", Icon: Cpu, color: "#ef4444" },
 ]
 
 export function TechnologiesSection() {
